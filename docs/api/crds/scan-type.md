@@ -37,7 +37,7 @@ See: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#job-v1
 apiVersion: "execution.securecodebox.io/v1"
 kind: ScanType
 metadata:
-  name: "zap-baseline"
+  name: "zap-baseline-scan"
 spec:
   extractResults:
     type: zap-json
@@ -49,7 +49,7 @@ spec:
         spec:
           restartPolicy: Never
           containers:
-            - name: zap-baseline
+            - name: zap-baseline-scan
               image: owasp/zap2docker-stable:2.9.0
               command:
                 - "zap-baseline.py"

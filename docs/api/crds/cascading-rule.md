@@ -52,6 +52,6 @@ spec:
           service: https
           state: open
   scanSpec:
-    scanType: "zap-baseline"
+    scanType: "zap-baseline-scan"
     parameters: ["-t", "{{attributes.service}}://{{$.hostOrIP}}"]
 ```
